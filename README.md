@@ -76,6 +76,7 @@ Currently the library offers the following API's
  - `isMenuOpened`: Returns whether the menu is opened or closed.
  - `setAnimationTime`: Controls the animation time to transition the menu from close to open state and vice versa. The time is represented in milli-seconds
  - `setStateChangeListener`: Allows you to listen to the state changes of the Menu, i.e. `onMenuOpened` and `onMenuClosed` events
+ - `ArcMenu.OnClickMenuListener`:Allows you to listen to the click on specific button
 
 License
 -------
