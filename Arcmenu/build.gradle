@@ -55,7 +55,7 @@ def getVersionName = { ->
     return "1.0.0"  // Replace with version Name
 }
 def getArtificatId = { ->
-    return "arcmenu" // Replace with library name ID
+    return "arcmenu" // Replace with library name
 }
 afterEvaluate {
     publishing {
