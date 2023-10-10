@@ -51,7 +51,7 @@ arcMenu = new ArcMenu.Builder(activity)
 ```kotlin
   val arcMenu = ArcMenu.Builder(this)
                 .addBtns(
-                    ArcButton.Builder(R.drawable.ic_add_to_photo, 1),
+                    ArcButton.Builder(R.drawable.ic_add_to_photo, id=1),//id is buttonID to specify which button is clicked 
                     ArcButton.Builder(R.drawable.ic_add_to_photo, 2),
                     ArcButton.Builder(R.drawable.ic_add_to_photo, 3),
                     ArcButton.Builder(R.drawable.ic_add_to_photo, 4),
@@ -73,6 +73,12 @@ arcMenu = new ArcMenu.Builder(activity)
                 .build()
 
             arcMenu.showOn(it) //Show Manually
+```
+ 
+```kotlin
+override fun onClickArcMenu(arcMenu: ArcMenu?, v: View?, clickedMenuId: Int) {
+    //clickedMenuId is buttonID to listen which button is clicked
+    }
 ```
 
 API
