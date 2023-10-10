@@ -12,34 +12,4 @@
         android:id="@+id/button"
         android:layout_centerInParent="true"
         />
-    <com.JamalZahid.arcmenu.ArcMenuLayout
-        android:id="@+id/arcMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-
-        >
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab1"
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_height="wrap_content" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_height="wrap_content" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_height="wrap_content" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_height="wrap_content" />
-
-    </com.JamalZahid.arcmenu.ArcMenuLayout>
 </RelativeLayout>
