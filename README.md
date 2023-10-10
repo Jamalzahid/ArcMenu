@@ -26,7 +26,7 @@ Add a dependency to your `build.gradle`:
     
     repositories{
         maven { url 'https://jitpack.io' }
-}
+    }
     dependencies {
     implementation 'com.github.Jamalzahid:ArcMenu:1.0.1'
 }
