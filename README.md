@@ -46,7 +46,7 @@ arcMenu = new ArcMenu.Builder(activity)
 
 ## More things
 
-![Desc][png_1](https://github.com/Jamalzahid/ArcMenu/blob/main/Arcmenu/1.png)
+![Desc](https://github.com/Jamalzahid/ArcMenu/blob/main/Arcmenu/1.png)
 
 ```java
 arcMenu = new ArcMenu.Builder(activity)
