@@ -53,7 +53,7 @@ dependencies {
 }
 
 def getVersionName = { ->
-    return "1.0.0"  // Replace with version Name
+    return "1.0.1"  // Replace with version Name
 }
 def getArtificatId = { ->
     return "arcmenu" // Replace with library name
