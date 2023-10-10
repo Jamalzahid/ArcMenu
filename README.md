@@ -48,23 +48,31 @@ arcMenu = new ArcMenu.Builder(activity)
 
 ![Desc](https://github.com/Jamalzahid/ArcMenu/blob/main/Arcmenu/1.png)
 
-```java
-arcMenu = new ArcMenu.Builder(activity)
-        .addBtns(new ArcButton.Builder(menuBtn, 2),
-                new ArcButton.Builder(new SimpleCirView(this)
-                        .setText("2")
-                        .setCirColor(Color.parseColor("#03A9F4"))
-                        .setTextColor(Color.WHITE)
-                        .setTextSizeInSp(22)
-                        .setBackgroundRadiusInPx(22),
-                        3))
-        .setListener(MainActivity.this)
-        .showOnLongClick(btn1)
-        .setDegree(160)
-        .setRadius(222)
-        .build();
-        
-arcMenu.showOn(view); //Show Manually
+```kotlin
+  val arcMenu = ArcMenu.Builder(this)
+                .addBtns(
+                    ArcButton.Builder(R.drawable.ic_add_to_photo, 1),
+                    ArcButton.Builder(R.drawable.ic_add_to_photo, 2),
+                    ArcButton.Builder(R.drawable.ic_add_to_photo, 3),
+                    ArcButton.Builder(R.drawable.ic_add_to_photo, 4),
+                    ArcButton.Builder(R.drawable.ic_add_to_photo, 5),
+                    ArcButton.Builder(
+                        SimpleCirView(this)
+                            .setText("2")
+                            .setCirColor(Color.parseColor("#03A9F4"))
+                            .setTextColor(Color.WHITE)
+                            .setTextSizeInSp(22)
+                            .setBackgroundRadiusInPx(40),
+                        6
+                    )
+                )
+                .setListener(this@MainActivity)
+                .showOnLongClick(it)
+                .setDegree(160.0)
+                .setRadius(300)
+                .build()
+
+            arcMenu.showOn(it) //Show Manually
 ```
 
 API
