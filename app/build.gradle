@@ -6,7 +6,9 @@ plugins {
 android {
     namespace 'com.JamalZahid.arcmenu'
     compileSdk 33
-
+    viewBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.JamalZahid.arcmenu"
         minSdk 24

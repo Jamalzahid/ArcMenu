@@ -31,80 +31,41 @@ Add a dependency to your `build.gradle`:
     implementation 'com.github.Jamalzahid:ArcMenu:1.0.1'
     }
 
-and include the `com.JamalZahid.arcmenu.ArcMenuLayout` as a viewgroup (with the sub-menu's as child) in your layout. The menu (floating action button) has a margin of 16dp (customizable) added to it by default to follow the material design guidelines.
-Example:
+# Usage
+## Basic
+```java
+arcMenu = new ArcMenu.Builder(activity)
+        .setId(ARC_MENU_ID_1)
+        .addBtn(R.drawable.a, id1)
+        .addBtn(R.drawable.b, id2)
+        .setListener(listener)
+        .showOnTouch(btn2)
+        .hideOnTouchUp(false)
+        .build();
+```
 
-   
-    <com.JamalZahid.arcmenu.ArcMenuLayout
-        android:id="@+id/arcMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-      
-       >
+## More things
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab1"
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_height="wrap_content" />
+![Desc][png_1]
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_dialog_alert"
-            android:layout_height="wrap_content" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_dialog_info"
-            android:layout_height="wrap_content" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_dialog_map"
-            android:layout_height="wrap_content" />
-
-    </com.JamalZahid.arcmenu.ArcMenuLayout>
-The sub-menu's (child) can be anything. Here is an ImageButton example:
-
-    <com.JamalZahid.arcmenu.ArcMenuLayout
-        android:id="@+id/arcMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
-        app:menu_color="@color/colorPrimaryDark"
-        app:menu_radius="200dp"
-        app:menu_ripple_color="@color/darker_gray"
-        app:menu_scr="@drawable/ic_dialog_dialer"
-        app:menu_open="arc_right">
-
-        <ImageButton
-            android:id="@+id/ib1"
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_dialog_email"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_dialog_alert"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_dialog_info"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:src="@drawable/ic_dialog_map"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-	        android:src="@drawable/ic_dialog_dialer"
-            android:layout_height="wrap_content" />
-
-    </com.JamalZahid.arcmenu.ArcMenuLayout>
+```java
+arcMenu = new ArcMenu.Builder(activity)
+        .addBtns(new ArcButton.Builder(menuBtn, 2),
+                new ArcButton.Builder(new SimpleCirView(this)
+                        .setText("2")
+                        .setCirColor(Color.parseColor("#03A9F4"))
+                        .setTextColor(Color.WHITE)
+                        .setTextSizeInSp(22)
+                        .setBackgroundRadiusInPx(22),
+                        3))
+        .setListener(MainActivity.this)
+        .showOnLongClick(btn1)
+        .setDegree(160)
+        .setRadius(222)
+        .build();
+        
+arcMenu.showOn(view); //Show Manually
+```
 
 API
 -------
