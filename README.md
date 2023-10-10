@@ -29,7 +29,7 @@ Add a dependency to your `build.gradle`:
     }
     dependencies {
     implementation 'com.github.Jamalzahid:ArcMenu:1.0.1'
-}
+    }
 
 and include the `com.JamalZahid.arcmenu.ArcMenuLayout` as a viewgroup (with the sub-menu's as child) in your layout. The menu (floating action button) has a margin of 16dp (customizable) added to it by default to follow the material design guidelines.
 Example:
